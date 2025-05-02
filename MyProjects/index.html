@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Puzzle Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Puzzle Solver</h1>
+        
+        <div class="main-content">
+            <div class="game-section">
+                <div class="size-selector">
+                    <label for="grid-size">Select Puzzle Size:</label>
+                    <select id="grid-size">
+                        <option value="4">4x4</option>
+                        <option value="6">6x6</option>
+                        <option value="9" selected>9x9</option>
+                    </select>
+                </div>
+                
+                <div class="sudoku-container">
+                    <div id="sudoku-grid" class="sudoku-grid"></div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="solve-btn">Solve</button>
+                    <button id="clear-btn">Clear</button>
+                    <button id="example-btn">Load Example</button>
+                </div>
+                
+                <div id="status" class="status"></div>
+            </div>
+            
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+                <div class="dashboard-item">
+                    <div class="dashboard-label">Difficulty Level:</div>
+                    <div id="difficulty-level" class="dashboard-value">N/A</div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-label">Empty Cells:</div>
+                    <div id="empty-cells" class="dashboard-value">0</div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-label">Filled Cells:</div>
+                    <div id="filled-cells" class="dashboard-value">0</div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-label">Solving Time:</div>
+                    <div id="solving-time" class="dashboard-value">0.000 sec</div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-label">Validity Check:</div>
+                    <div id="validity-status" class="dashboard-value">Not checked</div>
+                </div>
+                
+                <div class="number-distribution">
+                    <h3>Number Distribution</h3>
+                    <div id="number-stats" class="number-stats"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="solver.js"></script>
+</body>
+</html>
